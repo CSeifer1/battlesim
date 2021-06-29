@@ -4,4 +4,6 @@ project developed in UMBC CMSC 447 "Nature's RPG." This functionality was remove
 for easy testing with other tools.
 
 ## changelog
-- Added source files from existing open source project from UMBC CMSC 447
+- Set up project to work with Django
+- added basic html functionality
+- added basic database functionality

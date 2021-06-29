@@ -2,8 +2,6 @@
 # author: colin seifer
 # description: holds observation data.
 
-from ..Utils import TypeAssign
-from ..Utils import StatsAssign
 from . import Moves
 
 class LoadObservation:
