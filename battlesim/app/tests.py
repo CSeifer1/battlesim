@@ -7,13 +7,13 @@ import json
 from django.test import TestCase, Client
 from django.urls import reverse
 
-from ..utils.TypeAssign import Type
-from ..utils.StatsAssign import FLOOR, CEILING, INCREASE_MOD, DECREASE_MOD, QUALITY_MOD, Stats
-from .. import Moves
-from .. import LoadObservation
-from .. import BattleCalc
-from .. import BattleSys
-from .. import BattleEffects
+from .utils.TypeAssign import Type
+from .utils.StatsAssign import FLOOR, CEILING, INCREASE_MOD, DECREASE_MOD, QUALITY_MOD, Stats
+from . import Moves
+from . import LoadObservation
+from . import BattleCalc
+from . import BattleSys
+from . import BattleEffects
 
 client = Client()
 

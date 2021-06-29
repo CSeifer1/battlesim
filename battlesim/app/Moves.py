@@ -3,7 +3,6 @@
 # description: stores and returns moves
 
 import json
-import os
 
 class Moves:
     def __init__(self):
