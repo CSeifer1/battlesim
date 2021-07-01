@@ -1,0 +1,332 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+    {{ page.header|richtext|center:"15" }}
+    <form method="post">{% csrf_token %}
+        <p>
+            <button type="button" class="fighter" onclick="fighterSelect('amphibian')" id="amphibian">
+                {% image page.amphibian fill-100x100 %}
+                <div class="type amphibian">Type: </div>
+                <div>
+                    <span class="stat hp amphibian">HP: </span>
+                    <span class="stat atk amphibian">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def amphibian">DEF: </span>
+                    <span class="stat acc amphibian">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva amphibian">EVA: </span>
+                    <span class="stat spd amphibian">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 amphibian">Move1</span>
+                    <span class="move move2 amphibian">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 amphibian">Move3</span>
+                    <span class="move move4 amphibian">Move4</span>
+                </p>
+            </button>
+            <button type="button" class="fighter" onclick="fighterSelect('animal')" id="animal">
+                {% image page.animal fill-100x100 %}
+                <div class="type animal">Type: </div>
+                <div>
+                    <span class="stat hp animal">HP: </span>
+                    <span class="stat atk animal">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def animal">DEF: </span>
+                    <span class="stat acc animal">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva animal">EVA: </span>
+                    <span class="stat spd animal">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 animal">Move1</span>
+                    <span class="move move2 animal">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 animal">Move3</span>
+                    <span class="move move4 animal">Move4</span>
+                </p>
+            </button>
+            <button type="button" class="fighter" onclick="fighterSelect('arachnid')" id="arachnid">
+                {% image page.arachnid fill-100x100 %}
+                <div class="type arachnid">Type: </div>
+                <div>
+                    <span class="stat hp arachnid">HP: </span>
+                    <span class="stat atk arachnid">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def arachnid">DEF: </span>
+                    <span class="stat acc arachnid">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva arachnid">EVA: </span>
+                    <span class="stat spd arachnid">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 arachnid">Move1</span>
+                    <span class="move move2 arachnid">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 arachnid">Move3</span>
+                    <span class="move move4 arachnid">Move4</span>
+                </p>
+            </button>
+            <button type="button" class="fighter" onclick="fighterSelect('bird')" id="bird">
+                {% image page.bird fill-100x100 %}
+                <div class="type bird">Type: </div>
+                <div>
+                    <span class="stat hp bird">HP: </span>
+                    <span class="stat atk bird">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def bird">DEF: </span>
+                    <span class="stat acc bird">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva bird">EVA: </span>
+                    <span class="stat spd bird">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 bird">Move1</span>
+                    <span class="move move2 bird">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 bird">Move3</span>
+                    <span class="move move4 bird">Move4</span>
+                </p>
+            </button>
+        </p>
+        <p>
+            <button type="button" class="fighter" onclick="fighterSelect('chromist')" id="chromist">
+                {% image page.chromist fill-100x100 %}
+                <div class="type chromist">Type: </div>
+                <div>
+                    <span class="stat hp chromist">HP: </span>
+                    <span class="stat atk chromist">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def chromist">DEF: </span>
+                    <span class="stat acc chromist">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva chromist">EVA: </span>
+                    <span class="stat spd chromist">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 chromist">Move1</span>
+                    <span class="move move2 chromist">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 chromist">Move3</span>
+                    <span class="move move4 chromist">Move4</span>
+                </p>
+            </button>
+            <button type="button" class="fighter" onclick="fighterSelect('fish')" id="fish">
+                {% image page.fish fill-100x100 %}
+                <div class="type fish">Type: </div>
+                <div>
+                    <span class="stat hp fish">HP: </span>
+                    <span class="stat atk fish">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def fish">DEF: </span>
+                    <span class="stat acc fish">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva fish">EVA: </span>
+                    <span class="stat spd fish">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 fish">Move1</span>
+                    <span class="move move2 fish">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 fish">Move3</span>
+                    <span class="move move4 fish">Move4</span>
+                </p>
+            </button>
+            <button type="button" class="fighter" onclick="fighterSelect('fungi')" id="fungi">
+                {% image page.fungi fill-100x100 %}
+                <div class="type fungi">Type: </div>
+                <div>
+                    <span class="stat hp fungi">HP: </span>
+                    <span class="stat atk fungi">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def fungi">DEF: </span>
+                    <span class="stat acc fungi">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva fungi">EVA: </span>
+                    <span class="stat spd fungi">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 fungi">Move1</span>
+                    <span class="move move2 fungi">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 fungi">Move3</span>
+                    <span class="move move4 fungi">Move4</span>
+                </p>
+            </button>
+            <button type="button" class="fighter" onclick="fighterSelect('insect')" id="insect">
+                {% image page.insect fill-100x100 %}
+                <div class="type insect">Type: </div>
+                <div>
+                    <span class="stat hp insect">HP: </span>
+                    <span class="stat atk insect">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def insect">DEF: </span>
+                    <span class="stat acc insect">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva insect">EVA: </span>
+                    <span class="stat spd insect">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 insect">Move1</span>
+                    <span class="move move2 insect">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 insect">Move3</span>
+                    <span class="move move4 insect">Move4</span>
+                </p>
+            </button>
+        </p>
+        <p>
+            <button type="button" class="fighter" onclick="fighterSelect('mammal')" id="mammal">
+                {% image page.mammal fill-100x100 %}
+                <div class="type mammal">Type: </div>
+                <div>
+                    <span class="stat hp mammal">HP: </span>
+                    <span class="stat atk mammal">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def mammal">DEF: </span>
+                    <span class="stat acc mammal">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva mammal">EVA: </span>
+                    <span class="stat spd mammal">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 mammal">Move1</span>
+                    <span class="move move2 mammal">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 mammal">Move3</span>
+                    <span class="move move4 mammal">Move4</span>
+                </p>
+            </button>
+            <button type="button" class="fighter" onclick="fighterSelect('mollusc')" id="mollusc">
+                {% image page.mollusc fill-100x100 %}
+                <div class="type mollusc">Type: </div>
+                <div>
+                    <span class="stat hp mollusc">HP: </span>
+                    <span class="stat atk mollusc">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def mollusc">DEF: </span>
+                    <span class="stat acc mollusc">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva mollusc">EVA: </span>
+                    <span class="stat spd mollusc">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 mollusc">Move1</span>
+                    <span class="move move2 mollusc">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 mollusc">Move3</span>
+                    <span class="move move4 mollusc">Move4</span>
+                </p>
+            </button>
+            <button type="button" class="fighter" onclick="fighterSelect('plant')" id="plant">
+                {% image page.plant fill-100x100 %}
+                <div class="type plant">Type: </div>
+                <div>
+                    <span class="stat hp plant">HP: </span>
+                    <span class="stat atk plant">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def plant">DEF: </span>
+                    <span class="stat acc plant">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva plant">EVA: </span>
+                    <span class="stat spd plant">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 plant">Move1</span>
+                    <span class="move move2 plant">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 plant">Move3</span>
+                    <span class="move move4 plant">Move4</span>
+                </p>
+            </button>
+            <button type="button" class="fighter" onclick="fighterSelect('protozoa')" id="protozoa">
+                {% image page.protozoa fill-100x100 %}
+                <div class="type protozoa">Type: </div>
+                <div>
+                    <span class="stat hp protozoa">HP: </span>
+                    <span class="stat atk protozoa">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def protozoa">DEF: </span>
+                    <span class="stat acc protozoa">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva protozoa">EVA: </span>
+                    <span class="stat spd protozoa">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 protozoa">Move1</span>
+                    <span class="move move2 protozoa">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 protozoa">Move3</span>
+                    <span class="move move4 protozoa">Move4</span>
+                </p>
+            </button>
+        </p>
+        <p>
+            <button type="button" class="fighter" onclick="fighterSelect('reptile')" id="reptile">
+                {% image page.reptile fill-100x100 %}
+                <div class="type reptile">Type: </div>
+                <div>
+                    <span class="stat hp reptile">HP: </span>
+                    <span class="stat atk reptile">ATK: </span>
+                </div>
+                <div>
+                    <span class="stat def reptile">DEF: </span>
+                    <span class="stat acc reptile">ACC: </span>
+                </div>
+                <div>
+                    <span class="stat eva reptile">EVA: </span>
+                    <span class="stat spd reptile">SPD: </span>
+                </div>
+                <p>
+                    <span class="move move1 reptile">Move1</span>
+                    <span class="move move2 reptile">Move2</span>
+                </p>
+                <p>
+                    <span class="move move3 reptile">Move3</span>
+                    <span class="move move4 reptile">Move4</span>
+                </p>
+            </button>
+        </p>
+    </form>
+
+{% endblock %}
