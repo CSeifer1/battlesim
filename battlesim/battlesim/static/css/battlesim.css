@@ -1,0 +1,30 @@
+body{
+    margin: auto;
+    text-align: center;
+    color: #05491f;
+}
+
+html{
+    background-image: url("../img/bluesky.jpg");
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: none;
+    background-position: center center;
+}
+
+.fighter{
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    background-color: beige;
+}
+
+.container{
+    align-items: center;
+}
+
+.move{
+    padding: 0.25em;
+    margin: 0.25em;
+    border-style: solid;
+}
